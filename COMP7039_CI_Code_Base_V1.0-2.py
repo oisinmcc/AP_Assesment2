@@ -162,7 +162,7 @@ def relevant_runner_info(runners_name, runners_id):
         print(f"{i + 1}: {runners_name[i]}")
     user_input = read_integer_between_numbers("Which Runner > ", 1, len(runners_name))
     runner = runners_name[user_input - 1]
-    id = runners_id[user_input -1]
+    id = runners_id[user_input - 1]
     return runner, id
 
 
@@ -229,7 +229,7 @@ def main():
            "\n6. Show all competitors who have won a race \n7. Quit \n>>> "
     input_menu = read_integer_between_numbers(MENU, 1, 7)
 
-    while input_menu == 7:
+    while input_menu != 7:
         if input_menu == 1:
             id, time_taken, venue = race_results(races_location)
             fastest_runner = winner_of_race(id, time_taken)
